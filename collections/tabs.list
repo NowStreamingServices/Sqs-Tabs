@@ -12,6 +12,7 @@
   <squarespace:block-field id="sideContent-{collection.id}" label="Page Content" columns="1" class="tabSidebar" />
 
   {# Tab Wrapper }
+  {.if items}
   <div class="liveTabsWrapper">
 
     {# Tab Header - If passthrough URL, wrap the image in that link, otherwise use the tab content }
@@ -44,6 +45,7 @@
     {.end}
 
   </div>
+  {.end}
 </div>
 
 {# Page Specific Footer }
