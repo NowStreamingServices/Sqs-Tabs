@@ -1,0 +1,121 @@
+
+/* Mixins (If your site does not contain them already) */
+.transition(@transition) {
+  -webkit-transition: @transition;
+          transition: @transition;
+}
+.transform(@transform) {
+  -wekbit-transform: @transform;
+          transform: @transform;
+}
+.border-top-radius(@rad) {
+  -webkit-border-top-left-radius: @rad;
+          border-top-left-radius: @rad;
+  -webkit-border-top-right-radius: @rad;
+          border-top-right-radius: @rad;
+}
+
+/* TAB TWEAKS */
+
+// tweak: { "type" : "font", "category" : "Tabs", "title" : "Tab Font", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+.tabsFont {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.25em;
+  letter-spacing: 0em;
+  text-transform: none;
+}
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+@tabsFontColor: #e6e6e6;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Active Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+@tabsFontActive: #fff;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Color", "target" : "ul.liveTabs li a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
+@tabBackColor: #4f555a;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Active Color", "target" : "ul.liveTabs li.active a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
+@tabActiveBackColor: #b3d2ee;
+
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Hover Color", "target" : "ul.liveTabs li.active a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
+@tabHoverBackColor: #b3d2ee;
+
+/* TAB STYLING */
+
+.liveWrapper {
+  margin: 0 auto;
+  min-height: 400px;
+  
+  .tabSidebar {
+    float: left;
+    width: 49%;
+    padding-right: 1%;
+  }
+  
+  .liveTabsWrapper {
+    display: inline-block;
+    width: 49%;
+    padding-left: 1%;
+  }
+}
+ul.liveTabs {
+  list-style: none;
+  display: block;
+  padding: 2px;
+  text-align: center;
+  
+  li {
+    display: inline-block;
+    text-align: center;
+    .tabsFont;
+    
+    &.active a {
+      outline: none;
+      color: @tabsFontActive;
+      
+      .tabIcon {
+        outline: none;
+        background: @tabActiveBackColor;
+      }
+      
+      &:focus, &:active, &:hover {
+        outline: none;
+      }
+    }
+    
+    a {
+      outline: none;
+      color: @tabsFontColor;
+      .transition(color 0.3s ease);
+      
+      .tabIcon {
+        outline: none;
+        padding: 15px;
+        background: @tabBackColor;
+        .border-top-radius(10px);
+        cursor: pointer;
+        height: 48px;
+        width: 48px;
+
+        .transition(background 0.3s ease);
+        
+        &:hover {
+            background: @tabHoverBackColor;
+        }
+      }
+      
+      &:hover {
+        outline: none;
+        color: @tabsFontActive;
+      }
+      
+      &:focus, &:active {
+        outline: none;
+      }
+    }
+  }
+}
+

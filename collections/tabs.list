@@ -1,0 +1,50 @@
+
+{# Load jquery ui }
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+{# Title Content Area }
+<squarespace:block-field id="topContent-{collection.id}" label="Title Content" columns="12"/><br />
+
+{# Tab Block }
+<div class="liveWrapper">
+
+  {# Section for Live Player }
+  <squarespace:block-field id="sideContent-{collection.id}" label="Page Content" columns="1" class="tabSidebar" />
+
+  {# Tab Wrapper }
+  <div class="liveTabsWrapper">
+
+    {# Tab Header - If passthrough URL, wrap the image in that link, otherwise use the tab content }
+    <ul class="liveTabs">
+
+      {.repeated section items}
+      <li>
+
+        {.passthrough?}
+          <a class="tabsTitle" href="{sourceUrl}" target="_blank">
+            <img class="tabIcon" src="{customContent.tabHeadImg.assetUrl}" />
+          </a>
+        {.or}
+          <a class="tabsTitle" href="#{customContent.tabName}">
+            <img class="tabIcon" src="{customContent.tabHeadImg.assetUrl}" />
+          </a>
+        {.end}
+
+      </li>
+      {.end}
+    </ul>
+    <br />
+    <div style="padding: 5px;height: 15px;color: rgba(0,0,0,0);"></div>{# This is a spacer }
+
+    {# Tab Body Content }
+    {.repeated section items}
+    <div id="{customContent.tabName}" class="tabsContent">
+      {body}
+    </div>
+    {.end}
+
+  </div>
+</div>
+
+{# Page Specific Footer }
+<squarespace:block-field id="footerContent-{collection.id}" label="Page Lower Content" columns="12" />
