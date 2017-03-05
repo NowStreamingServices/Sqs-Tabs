@@ -9,7 +9,7 @@ This plugin requires the use of [Squarespace Developer Mode](https://developers.
 
 1. Copy the tabs.list and tabs.conf files to your collections folder  
 2. Copy the tabs.less to your style folder  
-3. Copy the jQuery-3-1-1-min.js and custom.js to your scripts folder  
+3. Copy the jquery-3-1-1-min.js and custom.js to your scripts folder  
   * _If your scripts folder already contains a custom.js, simply copy the code to that file_  
 4. Add the code from the site.region file to your site's footer, under the main site script call  
 5. Add the tabs.less, tabs collection and customTypes array to your template.conf as shown in this template.conf file  
