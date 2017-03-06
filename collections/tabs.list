@@ -27,7 +27,11 @@
           </a>
         {.or}
           <a class="tabsTitle" href="#{customContent.tabName}">
+            {.if customContent.tabHeadImg}
             <img class="tabIcon" src="{customContent.tabHeadImg.assetUrl}" />
+            {.or}
+            <p class="tabIcon tab-text">{title}</p>
+            {.end}
           </a>
         {.end}
 
