@@ -31,7 +31,7 @@
 
 /* TAB TWEAKS */
 
-// tweak: { "type" : "font", "category" : "Tabs", "title" : "Tab Font", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+// tweak: { "type" : "font", "category" : "Tabs", "title" : "Tab Font", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs p" }
 .tabsFont {
   font-family: 'Julius Sans One', sans-serif;
   font-weight: 400;
@@ -42,10 +42,10 @@
   text-transform: none;
 }
 
-// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs p" }
 @tabsFontColor: #e6e6e6;
 
-// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Active Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs .dontShow" }
+// tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Font Active Color", "target" : "ul.tabs li", "showOnlyWhenPresent" : "ul.liveTabs p" }
 @tabsFontActive: #fff;
 
 // tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Color", "target" : "ul.liveTabs li a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
@@ -115,6 +115,10 @@ ul.liveTabs {
         width: 48px;
 
         .transition(background 0.3s ease);
+
+        &.tab-text {
+          width: auto;
+        }
         
         &:hover {
             background: @tabHoverBackColor;
