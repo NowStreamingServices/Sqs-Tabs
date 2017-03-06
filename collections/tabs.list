@@ -3,13 +3,13 @@
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 
 {# Title Content Area }
-<squarespace:block-field id="topContent-{collection.id}" label="Title Content" columns="12"/><br />
+<squarespace:block-field id="topContent-{collection.id}" class="tab-title-content" label="Title Content" columns="12"/><br />
 
 {# Tab Block }
 <div class="liveWrapper">
 
   {# Section for Live Player }
-  <squarespace:block-field id="sideContent-{collection.id}" label="Page Content" columns="1" class="tabSidebar" />
+  <squarespace:block-field id="sideContent-{collection.id}" label="Page Content" columns="1" class="tab-page-content" />
 
   {# Tab Wrapper }
   {.if items}
@@ -53,4 +53,4 @@
 </div>
 
 {# Page Specific Footer }
-<squarespace:block-field id="footerContent-{collection.id}" label="Page Lower Content" columns="12" />
+<squarespace:block-field id="footerContent-{collection.id}" class="tab-footer-content" label="Page Lower Content" columns="12" />

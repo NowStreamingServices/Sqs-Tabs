@@ -65,7 +65,7 @@
   min-height: 400px;
   .flex-box();
   
-  .tabSidebar {
+  .tab-page-content {
     .flex(1);
     padding: 0 1%;
   }
@@ -133,6 +133,17 @@ ul.liveTabs {
       &:focus, &:active {
         outline: none;
       }
+    }
+  }
+}
+
+body:not(.sqs-edit-mode) {
+  .tab-page-content,
+  .tab-title-content,
+  .tab-footer-content {
+    &.empty {
+      display: none;
+      visibility: hidden;
     }
   }
 }
