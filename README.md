@@ -12,7 +12,7 @@ Tabs Plugin
 4. Add the code from the site.region file to your site's footer, under the main site script call  
 5. Add the tabs.less, tabs collection and customTypes array to your template.conf as shown in this template.conf file  
 
-## Reporting
+## Issues
 
 Please report any issues with this plugin using [the issues tab](https://github.com/NowStreamingServices/Sqs-Tabs/issues).  
 
