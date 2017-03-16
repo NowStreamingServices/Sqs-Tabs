@@ -1,4 +1,6 @@
 
+@tabFlexBreakpoint: 800px;
+
 /* Mixins (If your site does not contain them already) */
 .transition(@transition) {
   -webkit-transition: @transition;
@@ -145,6 +147,12 @@ body:not(.sqs-edit-mode) {
       display: none;
       visibility: hidden;
     }
+  }
+}
+
+@media only screen and (max-width: @tabFlexBreakpoint) {
+  .liveWrapper {
+    display: block;
   }
 }
 
