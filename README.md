@@ -20,4 +20,3 @@ Please report any issues with this plugin using [the issues tab](https://github.
 
 This plugin requires the use of [Squarespace Developer Mode](https://developers.squarespace.com/quick-start/) and is subject to their [Developer Terms of Use](https://developers.squarespace.com/developer-terms-of-use).  
 
-_More information coming soon._
