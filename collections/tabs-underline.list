@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<squarespace:block-field id="topContent-{collection.id}" label="Page Title Area" columns="12"/>
+
+<ul class="tabs">
+  {.repeated section items}
+    <li ><a class="tabTitle hvr-underline-from-left" href="#{urlId}">{title}</a></li>
+  {.end}
+</ul>
+
+<div class="customSpacer"></div>
+{.repeated section items}
+  <div id="{urlId}" class="tabContent">
+    {body}
+  </div>
+{.end}
