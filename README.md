@@ -13,6 +13,7 @@ Tabs Plugin
 5. Add the tabs.less, tabs collection and customTypes array to your template.conf as shown in the template.conf file  
 
 <h4 style="text-align:center;font-style:italic;">Preview</h4>
+
 ![Tab Preview](https://github.com/NowStreamingServices/Sqs-Tabs/blob/master/preview/tabPreview.png "Tab Preview")
 
 ### Optional Usage
@@ -27,6 +28,7 @@ Tabs Plugin
   * _The tab header image option will have no effect on the underlined tabs navigation_
 
 <h4 style="text-align:center;font-style:italic;">Preview</h4>
+
 ![Tab Underline Preview](https://github.com/NowStreamingServices/Sqs-Tabs/blob/master/preview/tabUnderlinePreview.png "Tab Underline Preview")
 
 ## Issues
