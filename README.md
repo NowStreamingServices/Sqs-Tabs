@@ -12,7 +12,7 @@ Tabs Plugin
 4. Add the code from the site.region file to your site's footer, under the main site script call  
 5. Add the tabs.less, tabs collection and customTypes array to your template.conf as shown in the template.conf file  
 
-![Tab Preview](https://github.com/NowStreamingServices/blob/master/preview/tabPreview.png "Tab Preview")
+![Tab Preview](https://github.com/NowStreamingServices/Sqs-Tabs/blob/master/preview/tabPreview.png "Tab Preview")
 
 ### Optional Usage
 >To use full width tabs with an underlined heading instead of an image  
@@ -25,7 +25,7 @@ Tabs Plugin
 5. Add the tabs-underline.less, tabs-underline collection and customTypes array to your template.conf as shown in the tmeplate.conf file
   * _The tab header image option will have no effect on the underlined tabs navigation_
 
-![Tab Underline Preview](https://github.com/NowStreamingServices/blob/master/preview/tabUnderlinePreview.png "Tab Underline Preview")
+![Tab Underline Preview](https://github.com/NowStreamingServices/Sqs-Tabs/blob/master/preview/tabUnderlinePreview.png "Tab Underline Preview")
 
 ## Issues
 
