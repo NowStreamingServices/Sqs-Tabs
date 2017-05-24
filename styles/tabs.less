@@ -1,35 +1,40 @@
-
 @tabFlexBreakpoint: 800px;
 
 /* Mixins (If your site does not contain them already) */
+
 .transition(@transition) {
   -webkit-transition: @transition;
           transition: @transition;
 }
+
 .transform(@transform) {
   -wekbit-transform: @transform;
           transform: @transform;
 }
+
 .flex-box() {
-  display: -webkit-box; /* OLD - iOS 6-, Safari 3.1-6 */
-  display: -moz-box; /* OLD - Firefox 19- (buggy but mostly works) */
-  display: -ms-flexbox; /* TWEENER - IE 10 */
-  display: -webkit-flex; /* NEW - Chrome */
-  display: flex; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  display: -webkit-box; // OLD - iOS 6-, Safari 3.1-6
+  display: -moz-box; // OLD - Firefox 19- (buggy but mostly works)
+  display: -ms-flexbox; // TWEENER - IE 10
+  display: -webkit-flex; // NEW - Chrome
+  display: flex; // NEW, Spec - Opera 12.1, Firefox 20+
 }
+
 .flex(@flex-num) {
-  -webkit-box-flex: @flex-num; /* OLD - iOS6-, Safari 3.1-6 */
-     -moz-box-flex: @flex-num; /* OLD - Firefox 19- */
-      -webkit-flex: @flex-num; /* Chrome */
-          -ms-flex: @flex-num; /* IE 10 */
-              flex: @flex-num; /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-flex: @flex-num; // OLD - iOS6-, Safari 3.1-6
+     -moz-box-flex: @flex-num; // OLD - Firefox 19-
+      -webkit-flex: @flex-num; // Chrome
+          -ms-flex: @flex-num; // IE 10
+              flex: @flex-num; // NEW, Spec - Opera 12.1, Firefox 20+
 }
+
 .border-top-radius(@rad) {
   -webkit-border-top-left-radius: @rad;
           border-top-left-radius: @rad;
   -webkit-border-top-right-radius: @rad;
           border-top-right-radius: @rad;
 }
+
 
 /* TAB TWEAKS */
 
@@ -59,6 +64,7 @@
 // tweak: { "type" : "color", "category" : "Tabs", "title" : "Tab Hover Color", "target" : "ul.liveTabs li.active a .tabIcon", "showOnlyWhenPresent" : "ul.liveTabs" }
 @tabHoverBackColor: #b5b5b5;
 
+
 /* TAB STYLING */
 
 .liveWrapper {
@@ -66,47 +72,42 @@
   padding: 10px;
   min-height: 400px;
   .flex-box();
-  
   .tab-page-content {
     .flex(1);
     padding: 0 1%;
   }
-  
   .liveTabsWrapper {
     .flex(1);
     padding: 0 1%;
   }
 }
+
 ul.liveTabs {
   list-style: none;
   display: block;
   padding: 2px;
   text-align: center;
-  
   li {
     display: inline-block;
     text-align: center;
     .tabsFont;
-    
     &.active a {
       outline: none;
       color: @tabsFontActive;
-      
       .tabIcon {
         outline: none;
         background: @tabActiveBackColor;
       }
-      
-      &:focus, &:active, &:hover {
+      &:focus,
+      &:active,
+      &:hover {
         outline: none;
       }
     }
-    
     a {
       outline: none;
       color: @tabsFontColor;
       .transition(color 0.3s ease);
-      
       .tabIcon {
         outline: none;
         padding: 15px;
@@ -115,24 +116,20 @@ ul.liveTabs {
         cursor: pointer;
         height: 48px;
         width: 48px;
-
         .transition(background 0.3s ease);
-
         &.tab-text {
           width: auto;
         }
-        
         &:hover {
-            background: @tabHoverBackColor;
+          background: @tabHoverBackColor;
         }
       }
-      
       &:hover {
         outline: none;
         color: @tabsFontActive;
       }
-      
-      &:focus, &:active {
+      &:focus,
+      &:active {
         outline: none;
       }
     }
@@ -155,4 +152,3 @@ body:not(.sqs-edit-mode) {
     display: block;
   }
 }
-
