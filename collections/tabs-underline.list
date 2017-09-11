@@ -1,14 +1,20 @@
+
+{# Load jquery ui }
 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
+{# Title Content Area }
 <squarespace:block-field id="topContent-{collection.id}" label="Page Title Area" columns="12"/>
 
+{# Tab Block }
 <ul class="tabs">
   {.repeated section items}
     <li ><a class="tabTitle hvr-underline-from-left" href="#{urlId}">{title}</a></li>
   {.end}
 </ul>
 
-<div class="customSpacer"></div>
+<div class="customSpacer"></div>{# This is a spacer}
+
+{# Section for Tab Content }
 {.repeated section items}
   <div id="{urlId}" class="tabContent">
     {body}
