@@ -1,6 +1,11 @@
 $( document ).ready( function() {
+  tabInit();
 
-  //TABS
+  //OPTIONAL: For underlined tabs navigation
+  tabUnderlineInit();
+} );
+
+function tabInit() {
   //When page loads...
   $( ".tabsContent" ).hide(); //Hide all content
   $( "ul.liveTabs li:first" ).addClass( "active" ).show(); //Activate first tab
@@ -14,8 +19,10 @@ $( document ).ready( function() {
     $( activeTab ).fadeIn(); //Fade in the active ID content
     return false;
   } );
+}
 
-  //OPTIONAL: For underlined tabs navigation
+//OPTIONAL: For underlined tabs navigation
+function tabUnderlineInit() {
   //When page loads...
   $( ".tabContent" ).hide(); //Hide all content
   $( "ul.tabs li:first" ).addClass( "active" ).show(); //Activate first tab
@@ -29,5 +36,4 @@ $( document ).ready( function() {
     $( activeTab ).fadeIn(); //Fade in the active ID content
     return false;
   } );
-  
-} );
+}
