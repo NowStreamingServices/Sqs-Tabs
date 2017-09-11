@@ -39,7 +39,7 @@
       {.end}
     </ul>
     <br />
-    <div style="padding: 5px;height: 15px;color: rgba(0,0,0,0);"></div>{# This is a spacer }
+    <div class="customSpacer"></div>{# This is a spacer }
 
     {# Tab Body Content }
     {.repeated section items}
