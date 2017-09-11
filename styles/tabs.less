@@ -12,7 +12,7 @@
           transform: @transform;
 }
 
-.flex-box() {
+.flex-parent {
   display: -webkit-box; // OLD - iOS 6-, Safari 3.1-6
   display: -moz-box; // OLD - Firefox 19- (buggy but mostly works)
   display: -ms-flexbox; // TWEENER - IE 10
@@ -67,17 +67,23 @@
 
 /* TAB STYLING */
 
+.customSpacer {
+  padding: 5px;
+  height: 15px;
+  color: rgba(0, 0, 0, 0);
+}
+
 .liveWrapper {
   margin: 0 auto;
   padding: 10px;
   min-height: 400px;
-  .flex-box();
+  .flex-parent;
   .tab-page-content {
-    .flex(1);
+    .flex(1 1 auto);
     padding: 0 1%;
   }
   .liveTabsWrapper {
-    .flex(1);
+    .flex(1 1 auto);
     padding: 0 1%;
   }
 }
@@ -136,6 +142,9 @@ ul.liveTabs {
   }
 }
 
+// This prevents empty content area from 
+// showing on the live site. This area 
+// will still show in edit mode
 body:not(.sqs-edit-mode) {
   .tab-page-content,
   .tab-title-content,
@@ -147,6 +156,8 @@ body:not(.sqs-edit-mode) {
   }
 }
 
+// This forces the tabs to sit on top of
+// each other rather than side-by-side
 @media only screen and (max-width: @tabFlexBreakpoint) {
   .liveWrapper {
     display: block;
